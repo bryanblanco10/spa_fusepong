@@ -1,0 +1,300 @@
+/*sideBar*/
+.sideBar
+{
+	left: 0;
+	z-index: 100;
+	background-color: var(--fifth-color);
+	border-right: 1px solid rgba(255, 255, 255, .4);
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	height: 100%;
+	transition: .8s ease-out;
+}
+
+.sideBar.active
+{
+	left: 0;
+}
+
+.sideBar .sideBar-ct
+{
+	width: 250px;
+	margin-bottom: 200px;
+}
+
+.scroll__menu--admin
+{
+    overflow:auto;
+}
+
+/* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
+
+/*el elemento que envuelve al conjunto*/
+.scroll__menu--admin::-webkit-scrollbar
+{
+    -webkit-appearance: none;
+ }
+
+/*barras de scroll verticales*/
+.scroll__menu--admin::-webkit-scrollbar:vertical
+{
+    width: 5px;
+}
+
+/*la barra y los botones*/
+.scroll__menu--admin::-webkit-scrollbar-button:increment,
+.scroll__menu--admin::-webkit-scrollbar-button
+{
+    display: none;
+}
+
+.scroll__menu--admin::-webkit-scrollbar-thumb
+{
+    background-color: #949292;
+    border-radius: 20px;
+    border: none;
+    /*height: 100px !important;*/
+}
+
+/*el carril de la barra*/
+.scroll__menu--admin::-webkit-scrollbar-track
+{
+    border-radius: 10px;
+}
+
+.sideBar-ct
+{
+	position: relative;
+	height: 100%;
+	padding: 0 10px;
+	padding-bottom: 30px;
+}
+
+.sideBar-title a
+{
+	height: 50px;
+	line-height: 50px;
+	color: var(--white-color);
+	font-size: 24px;
+	font-family: var(--fuente-econde-sans);
+	font-weight: 900;
+	text-decoration: none;
+	position: relative;
+	margin-left: 25px;
+}
+
+.sideBar-title a:hover
+{
+	color: var(--white-color);
+	text-decoration: none;
+}
+
+.btn__closed--menu
+{
+	background-color: transparent;
+	color: var(--white-color);
+	font-size: 25px;
+	border: none;
+	cursor: pointer;
+	display: none;
+}
+
+.btn__closed--menu:hover
+{
+	background-color: transparent;
+	color: var(--white-color);
+	font-size: 25px;
+}
+
+/*.open-menu
+{
+	left: 0;
+}*/
+
+.sideBar-UserInfo
+{
+	border-top: 1px solid rgba(255, 255, 255, .3);
+	border-bottom: 1px solid rgba(255, 255, 255, .3);
+}
+
+.sideBar-UserInfo img
+{
+	width: 100px;
+	height: 100px;
+	border-radius: 100%;
+	display: block;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+.sideBar-UserInfo h4
+{
+	color: var(--white-color);
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 18px;
+	font-family: var(--fuente-source-sans-pro);
+}
+
+.sideBar-UserInfo .name__business--admin
+{
+	color: var(--white-color);
+	margin-top: 10px;
+	margin-bottom: 5px;
+	font-size: 16px;
+	font-family: var(--fuente-source-sans-pro);
+	letter-spacing: 1px;
+}
+
+.sideBar-UserInfo .nit__business--admin
+{
+	color: var(--white-color);
+	margin-bottom: 5px;
+	font-size: 16px;
+	font-family: var(--fuente-source-sans-pro);
+	letter-spacing: 1px;
+}
+
+.sideBar-UserInfo ul
+{
+	margin-left: 40px;
+}
+
+.sideBar-ct .title__menu
+{
+	color: var(--white-color);
+	font-size: 18px;
+	font-family: var(--fuente-econde-sans);
+	margin-top: 10px;
+}
+
+.sideBar-menu
+{
+	padding-top: 15px;
+	margin-bottom: 15px;
+}
+
+.sideBar-UserInfo ul > li,
+.sideBar-UserInfo ul > li > a
+{
+	display: inline-block;
+	color: var(--white-color);
+	text-decoration: none;
+}
+
+.sideBar-UserInfo ul > li > a
+{
+	outline: none;
+	font-size: 20px;
+	margin-top: 10px;
+	transition: all .3s ease-in-out;
+}
+
+.sideBar-UserInfo ul > li > a:hover
+{
+	color: var(--second-color) !important;
+}
+
+.sideBar-menu .item__menu
+{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.sideBar-menu .item__menu a
+{
+	display: block;
+	color: var(--white-color);
+	width: 100%;
+	margin-bottom: 5px;
+	outline: none;
+	text-decoration: none;
+	height: 100%;
+	padding: 8px;
+	transition: all .3s ease-in-out;
+}
+
+.icono__menu {
+	font-size: 1.2rem;
+	margin-right: .3rem;
+}
+
+
+.sideBar-menu .item__menu a.router-link-exact-active
+{
+	color: var(--white-color);
+	background-color: var(--fourth-color) !important;
+	border-radius: 0.3rem;
+}
+
+.sideBar-menu .item__menu .title__item
+{
+	font-family: var(--fuente-source-sans-pro);
+	letter-spacing: 0.5px;
+	font-size: 20px;
+}
+
+.sideBar-menu .item__menu a:hover
+{
+	border-radius: 0.3rem;
+	background-color: rgba(255, 255, 255, .1);
+}
+
+
+/*Media querys*/
+/*** VERSION ESCRITORIO Y TABLETS PANTALLS GRANDE ***/
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+	.sideBar
+	{
+		left: -300px;
+	}
+
+	.btn__closed--menu
+	{
+		display: inline-block;
+	}
+}
+
+/*** VERSION TABLETS ***/
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+	.sideBar
+	{
+		left: -300px;
+	}
+
+	.btn__closed--menu
+	{
+		display: inline-block;
+	}
+}
+
+/*** VERSION CELULAR ***/
+@media only screen and (max-width: 767px) {
+	.sideBar
+	{
+		left: -300px;
+	}
+
+	.btn__closed--menu
+	{
+		display: inline-block;
+	}
+
+	.sideBar .sideBar-ct
+	{
+		width: 230px;
+	}
+
+	.sideBar-title a
+	{
+		font-size: 20px;
+	}
+	.sideBar-menu .item__menu a
+	{
+		font-size: 14px;
+	}
+}
+
+/*** VERSION CELULAR PEQUEÑO ***/
+@media only screen and (max-width: 340px) {}

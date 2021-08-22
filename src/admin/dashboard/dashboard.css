@@ -1,0 +1,78 @@
+.logo__fusepong
+{
+	height: 500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.logo__fusepong img
+{
+	width: 600px;
+	height: 250px;
+}
+
+.welcome
+{
+	font-size: 40px;
+	font-family: var(--fuente-econde-sans);
+	color: var(--black-color);
+}
+
+.welcome strong
+{
+	font-weight: 900;
+	color: var(--second-color);
+}
+
+
+/*Media querys*/
+/*** VERSION ESCRITORIO Y TABLETS PANTALLS GRANDE ***/
+@media only screen and (min-width: 768px) and (max-width: 1200px)
+{
+	.logo__fusepong img
+	{
+		width: 600px;
+		height: 250px;
+	}
+
+
+	.welcome
+	{
+		font-size: 30px;
+	}
+} 
+/*** VERSION TABLETS ***/
+@media only screen and (min-width: 768px) and (max-width: 992px)
+{
+	.logo__fusepong img
+	{
+		width: 600px;
+		height: 250px;
+	}
+
+	.welcome
+	{
+		font-size: 28px;
+	}
+}
+/*** VERSION CELULAR ***/
+@media only screen and (max-width: 767px)
+{
+
+	.logo__fusepong img
+	{
+		width: 400px;
+		height: 150px;
+	}
+
+	.welcome
+	{
+		font-size: 20px;
+	}
+}
+/*** VERSION CELULAR PEQUEÑO ***/
+@media only screen and (max-width: 340px)
+{
+
+}

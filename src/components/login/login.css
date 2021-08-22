@@ -1,0 +1,383 @@
+/*Imagen Spinner*/
+.img__spinner
+{
+	position: absolute;
+	height: 100vh;
+	width: 100%;
+	background: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.img__spinner img 
+{
+	width: 400px !important;
+	height: 400px !important;
+	animation-name: animation-logo;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes animation-logo
+{
+	from
+	{
+		transform: scale(0);
+	}
+	to
+	{
+		transform: scale(1);
+	}
+}
+
+
+/*Login*/
+.container__login
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 600px;
+}
+
+.logo{
+	width: 300px;
+}
+
+.login__content
+{
+	width: 370px;
+	text-align: center;
+	padding: 20px 32px;
+	border-radius: 1rem;
+	box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+
+.login__content .title__login
+{
+	margin-bottom: 30px;
+	color: #332927;
+	font-size: 28px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	font-family: var(--fuente-econde-sans);
+}
+
+.input__field
+{
+	position: relative;
+	height: 45px;
+	width: 100%;
+	display: flex;
+	/*background: rgba(255, 255, 255, 0.94);*/
+	border-bottom: 2px solid #858585;
+	margin-bottom: 20px;
+}
+
+.input__field input
+{
+	height: 100%;
+	width: 100%;
+	background: transparent;
+	border: none;
+	outline: none;
+	color: #332927;
+	font-size: 16px;
+	font-family: 'Poppins', sans-serif;
+}
+
+.input__code
+{
+	width: 70%;
+	height: 50px;
+	border-radius: .6rem;
+	border: 2px solid var(--second-color);
+	font-size: 20px;
+ 	outline: none;
+}
+
+.incorrecto .input__code{
+  border: 2px solid #bb2929;
+}
+
+.correcto .input__code{
+  border: 2px solid #1ed12d;
+}
+
+.input__code::-webkit-inner-spin-button
+{
+  -webkit-appearance: none;
+}
+
+
+.input__field input::placeholder {
+  color: #858585;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.icono__input
+{
+	color: #858585;
+	width: 35px;
+	font-size: 25px;
+	line-height: 45px;
+}
+
+.error__formulario
+{
+	position: relative;
+	/*left: -35px;*/
+	top: -20px;
+	margin-left: 10px;
+	font-size: 13px;
+  font-family: var(--fuente-econde-sans);
+  letter-spacing: 0.5px;
+  color: #bb2929;
+  display: none;
+}
+
+.error__formulario2
+{
+	position: relative;
+	/*left: -35px;*/
+	top: 0px;
+	margin-left: 10px;
+	font-size: 13px;
+  font-family: var(--fuente-econde-sans);
+  letter-spacing: 0.5px;
+  color: #bb2929;
+  display: none;
+}
+
+.incorrecto .error__formulario
+{
+	display: block;
+}
+
+.correcto .error__formulario
+{
+	display: none;
+}
+
+.incorrecto .error__formulario2
+{
+	display: block;
+}
+
+.correcto .error__formulario2
+{
+	display: none;
+}
+
+.olvidar__password
+{
+	margin: 10px 0;
+	position: relative;
+	margin-top: -15px;
+	text-align: right;
+}
+
+.a__login
+{
+	color: var(--black-color);
+	font-size: 0.9rem;
+	font-family: var(--fuente-econde-sans);
+	letter-spacing: 1px;
+	color: var(--second-color);
+}
+
+.a__login:hover{
+	text-decoration: none;
+	color: var(--second-color);
+}
+
+.a__registrar
+{
+	color: var(--second-color);
+	font-size: 0.9rem;
+	font-family: var(--fuente-econde-sans);
+	letter-spacing: 1px;
+}
+
+.a__registrar:hover{
+	text-decoration: none;
+	color: var(--second-color);
+}
+
+.register
+{
+	background-color: var(--third-color);
+	color: var(--white-color);
+	font-size: 16px;
+	padding: 8px 30px 8px 30px;
+	border-radius: 6px;
+	font-family: var(--fuente-lato);
+	letter-spacing: 0.5px;
+	border: none;
+}
+
+.register:hover
+{
+	text-decoration: none;
+	color: var(--white-color);
+	box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+
+.check__politica a
+{
+	text-decoration: none;
+	font-size: 13px;
+	color: var(--second-color) !important;
+	font-family: var(--fuente-econde-sans);
+}
+
+.check__politica .custom-control-label
+{
+	font-size: 14px;
+	font-family: var(--fuente-econde-sans);
+	color: #332927;
+}
+.check__politica a:hover
+{
+	color: var(--second-color);
+}
+
+.btn__ingresar{
+	background-color: var(--primary-color);
+	color: var(--white-color);
+	font-size: 16px;
+	border-radius: 6px;
+	font-family: var(--fuente-lato);
+	letter-spacing: 0.5px;
+	border: none;
+}
+
+.btn__ingresar:hover{
+	color: var(--white-color);
+	box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+
+button.btn__facebook
+{
+	background-color: #141DD5;
+	color: var(--white-color);
+	font-size: 16px;
+	/*padding: 8px 30px 8px 30px;*/
+	border-radius: 6px;
+	font-family: var(--fuente-lato);
+	letter-spacing: 0.5px;
+	border: none;
+}
+
+.text__registrate
+{
+	font-family: var(--fuente-econde-sans);
+	font-size: 16px;
+	color: #332927;
+}
+
+/*Media querys*/
+/*** VERSION ESCRITORIO Y TABLETS PANTALLS GRANDE ***/
+@media only screen and (min-width: 768px) and (max-width: 1200px) {}
+
+/*** VERSION TABLETS ***/
+@media only screen and (min-width: 768px) and (max-width: 992px)
+{
+	.logo
+	{
+		display: none;
+	}
+}
+/*** VERSION CELULAR ***/
+@media only screen and (max-width: 767px)
+{
+	.logo
+	{
+		display: none;
+	}
+
+	.login__content .title__login
+	{
+		font-size: 20px;
+	}
+
+	.input__field input
+	{
+		font-size: 14px;
+	}
+
+	.input__field input::placeholder
+	{
+		font-size: 14px;
+	}
+
+	.input__code
+	{
+		width: 80%;
+	}
+
+	.text__registrate
+	{
+		font-size: 14px;
+	}
+
+	.a__login
+	{
+		font-size: 14px;
+	}
+
+	.icono__input
+	{
+		font-size: 20px;
+	}
+
+	.check__politica a
+	{
+		text-decoration: none;
+		font-size: 13px;
+		color: var(--second-color);
+		font-family: var(--fuente-econde-sans);
+	}
+
+	.check__politica .custom-control-label
+	{
+		font-size: 13px;
+		font-family: var(--fuente-econde-sans);
+		color: #332927;
+	}
+
+	.img__spinner img 
+	{
+		width: 300px !important;
+		height: 300px !important;
+	}
+}
+
+/*** VERSION CELULAR PEQUEÑO ***/
+@media only screen and (max-width: 320px)
+{
+	.text__registrate
+	{
+		font-size: 13px;
+	}
+
+	.a__login
+	{
+		font-size: 13px;
+	}
+
+	.register
+	{
+		font-size: 14px;
+		padding: 8px 20px 8px 20px;
+	}
+
+	.error__formulario
+	{
+		font-size: 11px;
+	}
+}
+

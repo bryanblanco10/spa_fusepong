@@ -1,0 +1,392 @@
+/*Navbar*/
+.Navbar
+{
+	position: sticky;
+	top: 0;
+	right: 0;
+	z-index: 100;
+	padding-left: 250px;
+	background-color: var(--fifth-color);
+	overflow: hidden;
+	/*width: 100%;*/
+}
+
+.header__container--admin
+{
+	display: flex;
+	justify-content: space-between;
+	padding: 8px 15px;
+}
+
+.left__area
+{
+	display: flex;
+}
+
+.left__area .btn__bars--admin
+{
+	color: #fff;
+	font-size: 25px;
+	border: none;
+	padding: 5px 10px 5px 10px;
+	background-color: #22242A;
+	transition: all .3s ease-in-out;
+	display: none;
+}
+
+.left__area .btn__bars--admin:hover
+{
+	background-color: rgba(255, 255, 255, .4);
+}
+
+.right__area
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.right__area .notification
+{
+	font-size: 20px;
+	color: var(--white-color);
+	padding: 2px 10px 2px 10px;
+	border-radius: .3rem;
+	display: inline-block;
+	margin-right: 15px;
+}
+
+.right__area .notification .badge__notification
+{
+  background: #cc0000;
+  color: var(--white-color);
+  font-size: 14px;
+}
+
+.right__area .message
+{
+	font-size: 20px;
+	color: #fff;
+	padding: 2px 10px 2px 10px;
+	border-radius: .3rem;
+	display: inline-block;
+	margin-right: 20px;
+}
+
+.right__area .message .badge__message
+{
+  position: absolute;
+  top: 5px;
+  right: 63px;
+  padding: 3px 2px;
+  border-radius: 50%;
+  background: #cc0000;
+  color: white;
+  font-size: 11px;
+}
+
+.right__area button.user__profile--nav
+{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border: none;
+	background: transparent;
+}
+
+.right__area button.user__profile--nav img
+{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	position: relative;
+	right: 6px;
+	top: -1px;
+}
+
+/*panel user*/
+.panel__user
+{
+	width: 200px;
+	height: 135px;
+	background-color: var(--white-color);
+	right: -300px;
+	top: 55px;
+	position: fixed;
+	z-index: 200;
+	transition: .8s ease-in;
+	border-radius: .3rem;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.panel__user h5
+{
+	font-size: 16px;
+  margin-bottom: 3px;
+  margin-top: 3px;
+  text-align: center;
+  height: 40px;
+  color: var(--black-color);
+}
+
+.panel__user.active
+{
+	right: 10px;
+	transition: .8s ease-out;
+}
+
+.panel__user a
+{
+	display: block;
+	margin-top: 5px;
+	padding: 5px;
+	border-radius: .4rem;
+	text-align: center;
+	color: var(--black-color);
+}
+
+.panel__user a:hover
+{
+	text-decoration: none;
+	background: #F9CDCD;
+	color: var(--black-color);
+}
+/*-----------------*/
+/*Panel notification*/
+.panel__notification
+{
+	width: 400px;
+	height: auto;
+	background-color: var(--white-color);
+	right: -450px;
+	top: 55px;
+	position: fixed;
+	z-index: 100;
+	transition: .8s ease-in;
+	border-radius: .3rem;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.panel__notification.active
+{
+	right: 10px;
+	transition: .8s ease-out;
+}
+
+.card__order--notification
+{
+	border: 2px solid var(--third-color);
+	border-radius: .6rem;
+	cursor: pointer;
+}
+
+.card__fakes--notification
+{
+  height: 105px;
+  width: 100%;
+  background-color: rgba(var(--white_rgb), 0.3);
+  border-radius: .6rem;
+}
+
+.icono__order--notification
+{
+	font-size: 50px;
+	color: var(--third-color);
+	position: relative;
+	top: 5px;
+}
+
+
+.created__order
+{
+	font-size: 13px;
+  font-family: var(--fuente-econde-sans);
+  letter-spacing: 0.5px;
+  color: var(--black-color);
+}
+
+.state__pedido--notification
+{
+	font-size: 13px;
+	color: var(--third-color);
+	font-weight: bold;
+	font-family: var(--fuente-source-sans-pro);
+	letter-spacing: 1px;
+}
+
+.numer__order
+{
+	font-size: 14px;
+	font-family: var(--fuente-econde-sans);
+	color: var(--black-color);
+	letter-spacing: 1px;
+	font-weight: 600;
+}
+
+.content__panel--notifi
+{
+	height: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.icon__panel--notifi
+{
+	font-size: 80px;
+	color: var(--primary-color);
+}
+
+.text__panel--notifi h6
+{
+	font-size: 20px;
+	margin-top: 15px;
+	letter-spacing: 1px;
+}
+
+/*-------------------*/
+/*scroll*/
+.scroll__menu--notification
+{
+    overflow:auto;
+}
+
+/* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
+
+/*el elemento que envuelve al conjunto*/
+.scroll__menu--notification::-webkit-scrollbar
+{
+    -webkit-appearance: none;
+ }
+
+/*barras de scroll verticales*/
+.scroll__menu--notification::-webkit-scrollbar:vertical
+{
+    width: 5px;
+}
+
+/*la barra y los botones*/
+.scroll__menu--notification::-webkit-scrollbar-button:increment,
+.scroll__menu--notification::-webkit-scrollbar-button
+{
+    display: none;
+}
+
+.scroll__menu--notification::-webkit-scrollbar-thumb
+{
+    background-color: #949292;
+    border-radius: 20px;
+    border: none;
+    /*height: 100px !important;*/
+}
+
+/*el carril de la barra*/
+.scroll__menu--notification::-webkit-scrollbar-track
+{
+    border-radius: 10px;
+}
+/*-----------------*/
+
+/*Media querys*/
+/*** VERSION ESCRITORIO Y TABLETS PANTALLS GRANDE ***/
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+	.left__area .btn__bars--admin
+	{
+		display: inline-block;
+	}
+	.Navbar
+	{
+		padding-left: 0px;
+		width: 100%;
+	}
+
+	.panel__user
+	{
+		top: 65px;
+	}
+
+	.panel__notification
+	{
+		top: 65px;
+	}
+}
+/*** VERSION TABLETS ***/
+@media only screen and (min-width: 768px) and (max-width: 992px)
+{
+	.panel__user
+	{
+		top: 65px;
+	}
+
+	.panel__notification
+	{
+		top: 65px;
+	}
+}
+/*** VERSION CELULAR ***/
+@media only screen and (max-width: 768px)
+{
+	.left__area .btn__bars--admin
+	{
+		display: inline-block;
+	}
+
+	.Navbar
+	{
+		padding-left: 0px;
+		width: 100%;
+	}
+
+	.panel__user
+	{
+		top: 65px;
+	}
+
+	.panel__notification
+	{
+		top: 65px;
+		width: auto;
+	}
+
+	.time__badge
+	{
+		display: flex;
+		flex-direction: column;
+		margin-top: 5px;
+	}
+
+	.time__badge .created__order
+	{
+		font-size: 12px;
+	  letter-spacing: 0.5px;
+	  margin-bottom: 5px;
+	}
+
+	.badge__pedido--recibido
+	{
+		font-size: 12px;
+		letter-spacing: 0.5px;
+	}
+
+	.badge__pedido--entregado
+	{
+		font-size: 12px;
+		letter-spacing: 0.5px;
+	}
+
+	.badge__pedido--cancelado
+	{
+		font-size: 12px;
+		letter-spacing: 0.5px;
+	}
+
+	.numer__order
+	{
+		font-size: 12px;
+		letter-spacing: 0.5px;
+	}
+}
+/*** VERSION CELULAR PEQUEÑO ***/
+@media only screen and (max-width: 340px)
+{}
