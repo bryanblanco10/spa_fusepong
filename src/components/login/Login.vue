@@ -159,7 +159,7 @@ export default {
             localStorage.setItem("user",JSON.stringify(user))
             localStorage.setItem("access_token", res.data.token);
             localStorage.setItem("authenticated", true);
-            window.location.href = process.env.VUE_APP_HOME_ROUTE;
+            this.$router.push(process.env.VUE_APP_HOME_ROUTE);
             
           }catch(err){
             me.success = false;
