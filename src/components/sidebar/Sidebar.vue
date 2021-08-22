@@ -26,7 +26,7 @@
         <div class="item__menu">
           <router-link to="/app">
             <i class="fas fa-home icono__menu"></i>
-            <span class="title__item">Dashboard</span>
+            <span class="title__item">Home</span>
           </router-link>
         </div>
         <div class="item__menu">
