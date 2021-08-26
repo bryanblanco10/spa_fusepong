@@ -7,7 +7,7 @@ const API_ROUTES = {
     register: `${API_URL}/api/${API_VERSION}/auth/register`
   },
   enterprise: {
-    get: `${API_URL}api/${API_VERSION}/enterprise`,
+    get: `${API_URL}/api/${API_VERSION}/enterprise`,
     save: `${API_URL}/api/${API_VERSION}/enterprise`,
     delete: `${API_URL}/api/${API_VERSION}/enterprise`,
     update: `${API_URL}/api/${API_VERSION}/enterprise`
