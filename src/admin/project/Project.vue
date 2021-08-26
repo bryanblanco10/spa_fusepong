@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container container__modules">
     <div class="row mb-3">
       <div class="col-12">
         <div class="title__section text-center">Proyectos</div>
@@ -16,74 +16,76 @@
       </div>
     </div>
     <div class="row mt-1 justify-content-center mb-4">
-      <div class="col-10 text-center">
+      <div class="col-lg-10 col-md-10 col-12 text-center">
         <div class="card card__panel p-3">
-          <table class="table table-responsive table-sm">
-            <thead>
-              <tr class="text-center">
-                <th class="table__encabezado">Nombre</th>
-                <th class="table__encabezado">Descripción</th>
-                <th class="table__encabezado">Estado</th>
-                <th class="table__encabezado">Acciones</th>
-              </tr>
-            </thead>
-            <tbody>
-              <template v-if="isActive">
-                <tr v-for="(item, index) in fakes" :key="index">
-                  <td colspan="4">
-                    <div
-                      class="fake-td"
-                      :class="{ 'placeholder-loading': isActive }"
-                    ></div>
-                  </td>
+          <div class="table-responsive">
+            <table class="table table-responsive table-sm">
+              <thead>
+                <tr class="text-center">
+                  <th class="table__encabezado">Nombre</th>
+                  <th class="table__encabezado">Descripción</th>
+                  <th class="table__encabezado">Estado</th>
+                  <th class="table__encabezado">Acciones</th>
                 </tr>
-              </template>
-              <template v-else>
-                <template v-if="projects.length == 0">
-                  <tr>
+              </thead>
+              <tbody>
+                <template v-if="isActive">
+                  <tr v-for="(item, index) in fakes" :key="index">
                     <td colspan="4">
-                      <div class="title__section text-center mt-3">
-                        No hay proyectos para mostrar.
-                      </div>
+                      <div
+                        class="fake-td"
+                        :class="{ 'placeholder-loading': isActive }"
+                      ></div>
                     </td>
                   </tr>
                 </template>
                 <template v-else>
-                  <tr
-                    class="table__contenido"
-                    v-for="(item, index) in projects"
-                    :key="index"
-                  >
-                    <td>{{ item.name }}</td>
-                    <td>{{ item.description }}</td>
-                    <td>{{ item.status }}</td>
-                    <td>
-                      <div class="d-inline-flex">
-                        <button
-                          class="btn__action waves"
-                          data-toggle="tooltip"
-                          data-placement="top"
-                          title="Editar"
-                          @click="setSelectedRow(item)"
-                        >
-                          <i class="fas fa-edit"></i>
-                        </button>
-                        <router-link 
-                          class="btn__action waves ml-3"
-                          data-toggle="tooltip"
-                          data-placement="top"
-                          title="Historias de usuario"
-                          :to="{name: 'userHistory', params:{projectUuid: item.uuid}}"
-                        >
-                          <i class="fas fa-tasks"></i>
-                        </router-link >
-                      </div>
-                    </td>
-                  </tr>
+                  <template v-if="projects.length == 0">
+                    <tr>
+                      <td colspan="4">
+                        <div class="title__section text-center mt-3">
+                          No hay proyectos para mostrar.
+                        </div>
+                      </td>
+                    </tr>
+                  </template>
+                  <template v-else>
+                    <tr
+                      class="table__contenido"
+                      v-for="(item, index) in projects"
+                      :key="index"
+                    >
+                      <td>{{ item.name }}</td>
+                      <td>{{ item.description }}</td>
+                      <td>{{ item.status }}</td>
+                      <td>
+                        <div class="d-inline-flex">
+                          <button
+                            class="btn__action waves"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            title="Editar"
+                            @click="setSelectedRow(item)"
+                          >
+                            <i class="fas fa-edit"></i>
+                          </button>
+                          <router-link 
+                            class="btn__action waves ml-3"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            title="Historias de usuario"
+                            :to="{name: 'userHistory', params:{projectUuid: item.uuid}}"
+                          >
+                            <i class="fas fa-tasks"></i>
+                          </router-link >
+                        </div>
+                      </td>
+                    </tr>
+                  </template>
                 </template>
-              </template>
-            </tbody>
-          </table>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>

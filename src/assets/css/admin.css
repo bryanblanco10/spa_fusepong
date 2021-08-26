@@ -504,6 +504,7 @@ button.btn__new
 {
 	box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 	border-radius: 0.6rem;
+  overflow: hidden;
 }
 
 .table__encabezado
@@ -555,6 +556,11 @@ a.btn__action:hover{
 		width: 100%;
 		padding-left: 0;
 	}
+
+  .container__modules
+  {
+    padding: 0 15px 0 10px;
+  }
 }
 /*** VERSION TABLETS ***/
 @media only screen and (min-width: 768px) and (max-width: 992px)
@@ -564,6 +570,11 @@ a.btn__action:hover{
 		width: 100%;
 		padding-left: 0;
 	}
+
+  .container__modules
+  {
+    padding: 0 15px 0 10px;
+  }
 }
 /*** VERSION CELULAR ***/
 @media only screen and (max-width: 767px)
@@ -574,10 +585,49 @@ a.btn__action:hover{
 		width: 100%;
 		padding-left: 0;
 	}
+
+  .container__modules
+  {
+    padding: 0 15px 0 10px;
+  }
+
+  .title__section
+	{
+		font-size: 20px;
+	}
+
+  .icono__btn--new
+	{
+		font-size: 45px;
+	}
+
+	.text__btn--new
+	{
+		font-size: 14px;
+		font-family: var(--fuente-econde-sans);
+	}
+
+	.table__contenido
+	{
+		font-size: 14px;
+	}
+
+	.table__encabezado
+  {
+    font-size: 14px;
+  }
+
+  .btn__action
+  {
+    padding: 3px 8px 3px 8px;
+  }
 }
 
 /*** VERSION CELULAR PEQUEÑO ***/
 @media only screen and (max-width: 340px)
 {
-	
+	.table__contenido
+	{
+		font-size: 12px;
+	}
 }

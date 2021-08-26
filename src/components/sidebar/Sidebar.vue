@@ -23,19 +23,19 @@
       <!-- SideBar - Menu -->
       <div class="title__menu text-center">Menú</div>
       <div class="sideBar-menu">
-        <div class="item__menu">
+        <div class="item__menu" @click="btnClosed">
           <router-link to="/app">
             <i class="fas fa-home icono__menu"></i>
             <span class="title__item">Home</span>
           </router-link>
         </div>
-        <div class="item__menu">
+        <div class="item__menu" @click="btnClosed">
           <router-link to="/project">
             <i class="fas fa-folder-open icono__menu"></i>
             <span class="title__item">Proyectos</span>
           </router-link>
         </div>
-        <div class="item__menu">
+        <div class="item__menu" @click="btnClosed">
           <router-link to="/enterprise">
             <i class="fas fa-building icono__menu"></i>
             <span class="title__item">Compañías</span>
