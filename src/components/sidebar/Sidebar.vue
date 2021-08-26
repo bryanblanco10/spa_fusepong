@@ -3,7 +3,7 @@
     <div class="sideBar-ct">
       <!-- sideBar-title -->
       <div class="text-center text-uppercase sideBar-title">
-        <button class="btn__closed--menu">
+        <button class="btn__closed--menu" @click="btnClosed">
           <i class="fas fa-times"></i>
         </button>
         <router-link to="/app">Fusepong</router-link>
@@ -47,8 +47,11 @@
 </template>
 
 <script>
+import { actionLayout } from "@/mixins/layout";
 export default {
   name: "Sidebar",
+
+  mixins: [actionLayout],
 
   data(){
     return {
