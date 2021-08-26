@@ -43,6 +43,27 @@
           </small>
         </div>
       </div>
+      <div class="col-12 mb-2">
+        <div class="form__group">
+          <label>Estado</label>
+          <div class="form__group--input">
+            <b-form-radio-group class="pl-2" v-model="formFields.status">
+              <b-form-radio
+                class="radio__"
+                value="Activo"
+              >
+                Activo
+              </b-form-radio>
+              <b-form-radio
+                class="radio__"
+                value="Inactivo"
+              >
+                Inactivo
+              </b-form-radio>
+            </b-form-radio-group>
+          </div>
+        </div>
+      </div>
     </template>
   </base-modal-form>
 </template>

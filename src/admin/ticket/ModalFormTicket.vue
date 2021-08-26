@@ -57,7 +57,7 @@ export default {
       success: false,
       formFields: {
         commentary: "",
-        userHistoryUuid: "",
+        userHistoryUuid: this.uuid
       },
       field: {
         commentary: "commentary"
@@ -82,11 +82,6 @@ export default {
     postSubmit() {
       this.$emit("postSubmit");
     },
-  },
-
-  async mounted() {
-    const me = this;
-    me.formFields.userHistoryUuid = me.uuid;
   },
 };
 </script>

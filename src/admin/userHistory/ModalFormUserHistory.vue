@@ -57,7 +57,7 @@ export default {
       success: false,
       formFields: {
         description: "",
-        projectUuid: "",
+        projectUuid: this.uuid
       },
       field: {
         description: "description"
@@ -82,12 +82,7 @@ export default {
     postSubmit() {
       this.$emit("postSubmit");
     },
-  },
-
-  async mounted() {
-    const me = this;
-    me.formFields.projectUuid = me.uuid;
-  },
+  }
 };
 </script>
 

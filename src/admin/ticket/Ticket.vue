@@ -66,15 +66,6 @@
                         >
                           <i class="fas fa-edit"></i>
                         </button>
-                        <button
-                          class="btn__action waves ml-3"
-                          data-toggle="tooltip"
-                          data-placement="top"
-                          title="Eliminar"
-                          @click="handleDelete(item.uuid)"
-                        >
-                          <i class="fas fa-trash-alt"></i>
-                        </button>
                       </div>
                     </td>
                   </tr>
@@ -92,7 +83,6 @@
 </template>
 
 <script>
-import Swal from "sweetalert2";
 import { tickerService } from "@/services";
 import ModalRegister from "./ModalFormTicket";
 import ModalUpdate from "./ModalFormUpdateTicket";
@@ -174,36 +164,6 @@ export default {
       me.$root.$emit("bv::show::modal", "modal-form-update");
     },
     
-    handleDelete(uuid) {
-      Swal.fire({
-        title: "¿Realmente deseas eliminar este registro?",
-        icon: "warning",
-        showCancelButton: true,
-        confirmButtonColor: "#09ca6c",
-        cancelButtonColor: "#1f69e1",
-        cancelButtonText: "No",
-        confirmButtonText: "Si",
-      }).then((result) => {
-        if (result.isConfirmed) {
-          this.deleteRecord(uuid);
-        }
-      });
-    },
-
-    async deleteRecord(uuid) {
-      const me = this;
-      me.$root.$emit("bv::show::modal", "modal-delete");
-      const data = { status: "Eliminado" };
-      try {
-        await me.repository.delete(uuid, data);
-        me.handlePostSubmit();
-        me.$root.$emit("bv::hide::modal", "modal-delete");
-      } catch (error) {
-        me.$root.$emit("bv::hide::modal", "modal-delete");
-        console.log(error);
-      }
-    },
-
     handlePostSubmit() {
       this.loadTickets();
     }

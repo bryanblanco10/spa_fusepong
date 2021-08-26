@@ -82,7 +82,7 @@ export default {
       formFields: {
         name: "",
         description: "",
-        userUuid: "",
+        userUuid: this.uuidUser,
       },
       field: {
         name: "name",
@@ -113,10 +113,6 @@ export default {
     },
   },
 
-  async mounted() {
-    const me = this;
-    me.formFields.userUuid = me.uuidUser;
-  },
 };
 </script>
 
